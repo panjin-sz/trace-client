@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2011-2016 All Rights Reserved.
  */
-package com.panjin.backend.trace.enums;
+package com.panjin.backend.trace.meta.enums;
 
 /**
  *

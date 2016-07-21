@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2011-2016 All Rights Reserved.
  */
-package com.panjin.backend.trace.support;
+package com.panjin.backend.trace.meta.support;
 
 /**
  *
