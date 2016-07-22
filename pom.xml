@@ -5,7 +5,7 @@
   <artifactId>client</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>client</name>
+  <name>client-parent</name>
   <url>http://maven.apache.org</url>
   
   <properties>
@@ -17,8 +17,37 @@
 		<httpClient.version>4.3.3</httpClient.version>
   </properties>
   
+  <!-- 如果需要发布到远端仓库，需配置该项 -->
+  <distributionManagement>
+	<repository>
+		<id>releases</id>
+		<url>http://dev-maven.wjjr.cc/nexus/content/repositories/releases</url>
+	</repository>
+	<snapshotRepository>
+		<id>snapshots</id>
+		<name>Maven2 Snapshot Repository</name>
+		<url>http://dev-maven.wjjr.cc/nexus/content/repositories/snapshots</url>
+	</snapshotRepository>
+  </distributionManagement>
+  
   <dependencyManagement>
   	<dependencies>
+  		<dependency>
+  			<groupId>com.panjin.backend.trace</groupId>
+            <artifactId>trace-client</artifactId>
+            <version>${project.version}</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.panjin.backend.trace</groupId>
+            <artifactId>trace-meta</artifactId>
+            <version>${project.version}</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.panjin.backend.trace</groupId>
+            <artifactId>trace-util</artifactId>
+            <version>${project.version}</version>
+  		</dependency>
+  	
     	<dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
